@@ -2,33 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | E-commerce product page</title>
-
-
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <link href="/public/output.css" rel="stylesheet">
 </head>
 <body>
   <main>
-    <header class="container  mx-auto">
-      <nav class="flex">
-        <img src="/images/logo.svg" alt="">
+      <nav class=" container relative mx-auto p-2 flex  justify-between ">
+        <div class="flex  justify-between space-x-6">
+          <div>
+            <img src="./images/icon-menu.svg" class=" md:hidden p-1 " alt="">
+          </div>  
+          <div>
+            <img src="/images/logo.svg" class="object-contain pr-2" alt="">
+          </div>  
+          
+          <div class="md:flex items-center hidden  justify-between space-x-6">
+            <a href="">Collections</a>
+            <a href="">Men</a>
+            <a href="">Women</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+          </div>
+        </div>
+
+       
+        <div class="flex justify-between space-x-4">
+          <img src="./images/icon-cart.svg" class="h-6 w-6" alt="">
+          <img src="./images/image-avatar.png" class="object-contain h-6 w-6 " alt="">
+
+        </div>
+        
         
 
       </nav>
-    </header>
 
   </main>
  
-  Collections
-  Men
-  Women
-  About
-  Contact
+  
 
   Sneaker Company
 
