@@ -2387,6 +2387,14 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:invisible {
+    visibility: hidden;
+  }
+
+  .md\:absolute {
+    position: absolute;
+  }
+
   .md\:my-1 {
     margin-top: 0.25rem;
     margin-bottom: 0.25rem;
