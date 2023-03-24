@@ -2,35 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | E-commerce product page</title>
-
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link href="/public/output.css" rel="stylesheet">
 </head>
 <body>
   <main>
-    <header class="container  mx-auto">
-      <nav class="flex">
-        <img src="/images/logo.svg" alt="">
-        
+      <nav class=" container relative mx-auto p-2 flex  justify-between ">
+        <div class="flex  justify-between space-x-8">
+          <div class="md:hidden">
+            <img src="./images/icon-menu.svg" class="object-contain block md:hidden p-1 " alt="">
+          </div>  
+          <div>
+            <img src="/images/logo.svg" class="object-contain pr-2" alt="">
+          </div>  
+          
+          <div class="md:flex items-center hidden  justify-between space-x-6">
+            <a href="hover:text-veryDarkBlue" class="relative group ">Collections
+              <hr class="absolute border border-t-0  border-r-0 border-l-0 w-full border-4 group-hover:transition group-hover:duration-600 hidden group-hover:block  group-hover:border-orange pt-6">
+            </a>
+            <a href="" class="relative group ">Men
+              <hr class="absolute border border-t-0  border-r-0 border-l-0 w-full border-4 group-hover:transition group-hover:duration-600 hidden group-hover:block  group-hover:border-orange pt-6">
+            </a>
+            <a href="" class="relative group ">Women
+              <hr class="absolute border border-t-0  border-r-0 border-l-0 w-full border-4 group-hover:transition group-hover:duration-600 hidden group-hover:block  group-hover:border-orange pt-6">
+            </a>
+            <a href=""  class="relative group ">About
+              <hr class="absolute border border-t-0  border-r-0 border-l-0 w-full border-4 group-hover:transition group-hover:duration-600 hidden group-hover:block  group-hover:border-orange pt-6">
+            </a>
+            <a class="relative group " href="">Contact
+              <hr class="absolute border border-t-0  border-r-0 border-l-0 w-full border-4 group-hover:transition group-hover:duration-600 hidden group-hover:block  group-hover:border-orange pt-6">
+            </a>
+          </div>
+        </div>
 
+       
+        <div class="flex justify-between space-x-4">
+          <img src="./images/icon-cart.svg" class="h-5 w-5 md:h-4 md:w-4 md:my-1" alt="">
+          <img src="./images/image-avatar.png" class="object-contain h-6 w-6 " alt="">
+
+        </div>
+        
+      
       </nav>
-    </header>
+      <hr class="container mx-auto  border-t border-3 w-full md:block hidden border-gray-300  my-5 "/>
 
   </main>
  
-  Collections
-  Men
-  Women
-  About
-  Contact
+  
 
   Sneaker Company
 
