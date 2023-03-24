@@ -8,33 +8,33 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | E-commerce product page</title>
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightbox2/dist/css/lightbox.min.css">  <link href="/public/output.css" rel="stylesheet">
+  <link href="/public/output.css" rel="stylesheet">
 </head>
 <body>
   <main>
       <nav class=" container relative mx-auto p-2 flex  justify-between ">
         <div class="flex  justify-between space-x-8">
           <div class=" invisible md:hidden ">
-            <img src="./images/icon-menu.svg" class="object-contain p-1" alt="">
+            <img src="./images/icon-menu.svg" class="object-contain p-1 align-baseline" alt="">
           </div>  
           <div>
             <img src="/images/logo.svg" class="object-contain pr-2" alt="">
           </div>  
           
           <div class="md:flex items-center hidden  justify-between space-x-6">
-            <a href="hover:text-veryDarkBlue" class="relative group ">Collections
+            <a href="" class="relative group text-darkGrayishBlue  hover:text-veryDarkBlue ">Collections
               <hr class="absolute border border-t-0  border-r-0 border-l-0 w-full border-4 group-hover:transition group-hover:duration-600 hidden group-hover:block  group-hover:border-orange pt-6">
             </a>
-            <a href="" class="relative group ">Men
+            <a href="" class="relative group text-darkGrayishBlue  hover:text-veryDarkBlue">Men
               <hr class="absolute border border-t-0  border-r-0 border-l-0 w-full border-4 group-hover:transition group-hover:duration-600 hidden group-hover:block  group-hover:border-orange pt-6">
             </a>
-            <a href="" class="relative group ">Women
+            <a href="" class="relative group text-darkGrayishBlue  hover:text-veryDarkBlue">Women
               <hr class="absolute border border-t-0  border-r-0 border-l-0 w-full border-4 group-hover:transition group-hover:duration-600 hidden group-hover:block  group-hover:border-orange pt-6">
             </a>
-            <a href=""  class="relative group ">About
+            <a href=""  class="relative group  text-darkGrayishBlue  hover:text-veryDarkBlue">About
               <hr class="absolute border border-t-0  border-r-0 border-l-0 w-full border-4 group-hover:transition group-hover:duration-600 hidden group-hover:block  group-hover:border-orange pt-6">
             </a>
-            <a class="relative group " href="">Contact
+            <a class="relative group text-darkGrayishBlue  hover:text-veryDarkBlue" href="">Contact
               <hr class="absolute border border-t-0  border-r-0 border-l-0 w-full border-4 group-hover:transition group-hover:duration-600 hidden group-hover:block  group-hover:border-orange pt-6">
             </a>
           </div>
@@ -43,36 +43,44 @@
        
         <div class="flex justify-between space-x-4">
           <img src="./images/icon-cart.svg" class="h-5 w-5 md:h-4 md:w-4 md:my-1" alt="">
-          <img src="./images/image-avatar.png" class="object-contain h-6 w-6 " alt="">
+          <img src="./images/image-avatar.png" class="object-contain h-8 w-8 " alt="">
 
         </div>
         
       
       </nav>
-      <hr class="container mx-auto  border-t border-3 w-full md:block hidden border-gray-300  my-5 "/>
+      <hr class="container mx-auto  border-t border-3 w-full md:block hidden border-gray-300  my-4 "/>
 
       <section>
-        <div class="container mx-auto flex flex-col md:flex-row md:space-x-4">
-          <div class="lighbox md:w-1/2">
+        <div class="container mx-auto flex flex-col md:flex-row md:space-x-6 mt-20">
+          <div class=" md:w-1/2">
             <div class="imag w-80%">
               <img src="./images/image-product-1.jpg" alt="">
             </div>
           </div>
-          <div class="text-area md:w-1/2">
-            <div class="">
-              <p>  Sneaker Company</p>
-              <p>Fall Limited Edition Sneakers</p>
-              <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+
+          <div class="text-area md:w-1/2 p">
+            <div class="p-10 space-y-5">
+              <p class="text-orange text-sm">  SNEAKER COMPANY</p>
+              <p class="text-4xl font-bold space-y-4 my-5">Fall Limited Edition Sneakers</p>
+              <p class="text-darkGrayishBlue">These low-profile sneakers are your perfect casual wear companion. Featuring a 
                 durable rubber outer sole, they’ll withstand everything the weather can offer.
               </p>
-              <p>
-                $125.00
-                 50%
-                $250.00
-              </p>
-
-               0
-              Add to cart
+              <div>
+                <div class="flex md:flex-row space-x-2 relative">
+                  <p class="font-bold text-2xl">
+                    $125.00  
+                  </p>
+                  <p class="text-orange bg-paleOrange px-2  text-sm   top-0"> 50%</p> 
+                </div>               
+                <p class="text-darkGrayishBlue line-through">$250.00</p>
+              </div>
+              <div class="flex md:flex-row space-x-2">
+                <button  id="buttonForNoOfItems" class=" rounded-md relative shadow-2xl pt-2  space-x-4 pb-2 px-10 baseline text-veryDarkBlue bg-lightGrayishBlue" type="submit"><img src="./images/icon-minus.svg" id="minusVal" class="  absolute  left-2 top-4" onclick="addval()" alt=""> 0 <img src="./images/icon-plus.svg" id="addVal" class="absolute right-2 top-3 t" alt=""></button>
+                <button class="bg-orange  text-sm font-bold shadow-2xl relative rounded-md pt-2 pb-2   px-12 baseline text-lightGrayishBlue" type="submit"><img src="./images/icon-cart copy.svg"  class="w-3 h-3 text-white absolute left-6 top-4 " alt="">  Add to cart</button>
+                
+              </div>
+             
             </div>
           </div>
         </div>
@@ -93,7 +101,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Andoh Francis (CobbyElsonfx)</a>.
   </div>
+  <script src="./public/script.js"></script>
 
-  <script src="path/to/lightbox2.js"></script>
 </body>
 </html>

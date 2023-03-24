@@ -83,7 +83,6 @@ Remember, if you're looking for feedback on your solution, be sure to ask questi
 
     Create a modal component in your HTML markup using Tailwind CSS classes. Here's an example:
 
-scss
 
 <div class="fixed z-10 inset-0 overflow-y-auto">
   <div class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center">
@@ -102,7 +101,7 @@ scss
 
 Here's an example of how you might use JavaScript to toggle the visibility of the modal component:
 
-php
+
 
 <script>
   const openModalButtons = document.querySelectorAll('[data-modal-target]')
