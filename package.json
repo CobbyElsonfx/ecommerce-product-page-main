@@ -1,10 +1,12 @@
 {
   "scripts": {
-  "build": "tailwindcss -i ./styles.css -o ./public/output.css",
-   "watch": "tailwindcss -i ./styles.css -o ./public/output.css --watch"
-
-},
+    "build": "tailwindcss -i ./styles.css -o ./public/output.css",
+    "watch": "tailwindcss -i ./styles.css -o ./public/output.css --watch"
+  },
   "devDependencies": {
     "tailwindcss": "^3.2.7"
+  },
+  "dependencies": {
+    "jquery": "^3.6.4"
   }
 }

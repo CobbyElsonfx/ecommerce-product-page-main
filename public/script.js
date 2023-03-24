@@ -1,22 +1,21 @@
-var addNum = document.getElementById("addVal")
+// import $ from "jquery"
+
+var addNum = document.getElementById("#addVal")
 var minusVal = document.getElementById("minusVal")
-var buttonForNoOfItems = document.getElementById("buttonForNoOfItems").value
+var buttonForNoOfItems = document.getElementById("noOfClick").value
 
-// addVal.onClick((ev)=>{
-//     let num = buttonForNoOfItems + 1;
-//     buttonForNoOfItems.innerElement = num
-//     console.log(num)
-//     return num
-
-// })
-
-
-function addval() {
-    let num  = buttonForNoOfItems + 1
+function addVal() {
     console.log(buttonForNoOfItems)
-    alert(num)
- 
+    console.log("Hellow")
+
 }
+
+
+// $(document).ready(function () {
+//     $("#minusVal").click(()=>{
+//         console.log(buttonForNoOfItems)
+//     })
+// })
 
 
 console.log("workin")
