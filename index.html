@@ -8,13 +8,15 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | E-commerce product page</title>
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link href="/public/output.css" rel="stylesheet">
 </head>
 <body>
+  
   <main>
-      <nav class=" container relative mx-auto p-2 flex  justify-between ">
-        <div class="flex  justify-between space-x-8">
-            <img  src="./images/icon-menu.svg" class="  md:invisible md:hidden  object-contain p-1 align-baseline" alt="">
+      <nav class=" container navbar relative mx-auto pl-2 pr-2  pt-2 flex  justify-between ">
+        <div class="flex   justify-between space-x-8">
+            <img  src="./images/icon-menu.svg"   onclick="openNav()"  class="  md:invisible md:hidden  object-contain p-1 align-baseline" alt="">
             <img src="/images/logo.svg" class="object-contain pr-2" alt="">
           
           <div class="md:flex items-center hidden  justify-between space-x-6">
@@ -36,25 +38,65 @@
           </div>
         </div>
 
-       
-        <div class="flex justify-between space-x-4 relative">
-          <img src="./images/icon-cart.svg" class="absolute top-2 right-10 h-4 w-4 md:h-4 md:w-4 md:my-1" alt="">
+        
+        <div class="flex justify-between  space-x-6 relative">
+          <div class="absolute top-0 right-14 h-4 w-4 md:h-4 md:w-4 "  >
+            <div class="bg-orange rounded-full w-5 h-3 relative left-2 top-2">
+              <span id="cartValue" class="    absolute text-white   left-1 top-0">0</span> 
+            </div>
+           <img id="cart" src="./images/icon-cart.svg" class="" alt="">
+          </div>
           <img src="./images/image-avatar.png" class="object-contain h-8 w-8 " alt="">
 
         </div>
-        
+
+        <!-- side nav  -->
+        <div id="mySideNav"  class="  z-50  w-0 overflow-x-hidden left-0 top-0 bottom-0 transition-all duration-500 fixed bg-white  md:hidden">
+          <div id="close" class="px-4 py-4">
+            <img  src="./images/icon-close.svg" onclick="closeNav()"  alt="">
+          </div>
+          <ul class="flex flex-col space-y-4 px-4 pt-10" >
+            <li class="pt-4">Collection</li>
+            <li>Men</li>
+            <li>Women</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+
+        </div>
+
+
+        <!-- end of side nav -->
+
+
+
+       <!-- cart basket -->
+        <div id="cartBasket" class=" shadow-lg  rounded-md  hidden  bg-white right-0 md:top-10">
+          <div class="header pt-4 pb-4">
+            <p class="text-xl text-base px-4">Cart</p>
+          </div>
+          <hr class="py-7">
+          <div class="content">
+            <p class="p-3 text-center">No items in cart</p>
+          </div>
+        </div>
+        <!-- cart basket end -->
       
       </nav>
+      <!-- nav ends -->
       <hr class="container mx-auto  border-t border-3 w-full md:block hidden border-gray-300  my-4 "/>
-
+        <!-- main content -->
       <section>
         <div class="container mx-auto flex flex-col md:flex-row md:space-x-6 mt-20">
+          <!-- lightbox starts -->
           <div class=" md:w-1/2">
             <div class="imag w-80%">
               <img src="./images/image-product-1.jpg" alt="">
             </div>
           </div>
+          <!-- lightbox ends -->
 
+          <!-- product description starts -->
           <div class="text-area md:w-1/2 p">
             <div class="p-10 space-y-5">
               <p class="text-orange text-sm">  SNEAKER COMPANY</p>
@@ -72,8 +114,8 @@
                 <p class="text-darkGrayishBlue line-through ">$250.00</p>
               </div>
               <div class="flex md:flex-row space-x-2">
-                <button  id="noOfClick" class=" rounded-md relative shadow-2xl pt-2  space-x-4 pb-2 px-10 baseline text-veryDarkBlue bg-lightGrayishBlue" type="submit"><img src="./images/icon-minus.svg" id="minusVal" class="  absolute  left-2 top-4" onclick="addVal()" alt=""> 0 <img src="./images/icon-plus.svg" id="addVal" class="absolute right-2 top-3 t" alt=""></button>
-                <button class="bg-orange  text-sm font-bold shadow-2xl relative rounded-md pt-2 pb-2   px-12 baseline text-lightGrayishBlue" type="submit"><img src="./images/icon-cart copy.svg"  class="w-3 h-3 text-white absolute left-6 top-4 " alt="">  Add to cart</button>
+                <button  id="clickButton" value="0" class=" rounded-md relative shadow-2xl pt-2  space-x-4 pb-2 px-10 baseline text-veryDarkBlue bg-lightGrayishBlue" ><img src="./images/icon-minus.svg" id="minus" class="  absolute  left-2 top-4" alt=""><span id="innerNum">0</span><img src="./images/icon-plus.svg" id="addVal" class="absolute right-2 top-3 t" alt=""></button>
+                <button class="bg-orange  text-sm font-bold shadow-2xl relative rounded-md pt-2 pb-2   px-12 baseline text-lightGrayishBlue" id="addtoCart" type="submit"><img src="./images/icon-cart copy.svg"  class="w-3 h-3 text-white absolute left-6 top-4 " alt="">  Add to cart</button>
                 
               </div>
              
@@ -93,10 +135,10 @@
 
   
   
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Andoh Francis (CobbyElsonfx)</a>.
-  </div>
+  </div> -->
   <script src="./public/script.js"></script>
 </body>
 </html>

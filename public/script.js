@@ -1,21 +1,52 @@
-// import $ from "jquery"
+$(document).ready(()=> {
+  let buttonValue = parseInt($("#clickButton").val())
+    $("#minus").click(()=>{
+        buttonValue --
+        if(buttonValue < 0){
+          buttonValue = 0
+        }
+        $("#clickButton").val(buttonValue)
+        $("#innerNum").text(buttonValue)
 
-var addNum = document.getElementById("#addVal")
-var minusVal = document.getElementById("minusVal")
-var buttonForNoOfItems = document.getElementById("noOfClick").value
+        
 
-function addVal() {
-    console.log(buttonForNoOfItems)
-    console.log("Hellow")
+    })
+
+    $("#addVal").click(()=>{
+        buttonValue ++
+        $("#clickButton").val(buttonValue)
+        $("#innerNum").text(buttonValue)
+
+           
+
+    })
+
+    //adding to cart functionality
+    $("#addtoCart").click(()=>{
+      $("#cartValue").text(buttonValue)
+    })
+
+
+
+
+    // cartbasket toggle
+    $("#cart").hover(()=>{
+      $("#cartBasket").toggle()
+    })
+})
+
+
+function openNav () {
+  document.getElementById("mySideNav").style.width = "220px"
 
 }
 
-
-// $(document).ready(function () {
-//     $("#minusVal").click(()=>{
-//         console.log(buttonForNoOfItems)
-//     })
-// })
+const closeNav = ()=>{
+  document.getElementById("mySideNav").style.width = "0px"
+}
 
 
-console.log("workin")
+
+
+
+
