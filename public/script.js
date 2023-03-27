@@ -16,6 +16,7 @@ $(document).ready(()=> {
         buttonValue ++
         $("#clickButton").val(buttonValue)
         $("#innerNum").text(buttonValue)
+        
 
            
 
