@@ -6,3 +6,43 @@
 body{
     font-weight: 16px;
 }
+
+/* @media (min-width: 768px) {
+    .fixed {
+      transform: none !important;
+    }
+
+    #sidebar-toggle {
+      display: none;
+    }
+  } */
+
+#cartValue {
+  font-size: x-small;
+}
+
+#cartBasket{
+  position: absolute;
+  top: 7rem;
+  width:98%;
+  height: 15rem;
+  right: .2rem;
+}
+
+
+
+
+@media screen and (min-width:375px) {
+  #cartBasket{
+    position: absolute;
+    top: 3rem;
+    width: 17rem;
+    height: 15rem;
+  }
+  
+}
+
+
+#mySideNav {
+  height: 100%;
+}
