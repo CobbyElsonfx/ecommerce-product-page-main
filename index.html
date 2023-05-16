@@ -7,13 +7,12 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | E-commerce product page</title>
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link href="/public/output.css" rel="stylesheet">
 </head>
 <body>
   
-  <main>
+  <main class="">
       <nav class=" container navbar relative mx-auto pl-2 pr-2  pt-2 flex  justify-between ">
         <div class="flex   justify-between space-x-8">
             <img  src="./images/icon-menu.svg"   onclick="openNav()"  class="  md:invisible md:hidden  object-contain p-1 align-baseline" alt="">
@@ -46,7 +45,7 @@
             </div>
            <img id="cart" src="./images/icon-cart.svg" class="" alt="">
           </div>
-          <img src="./images/image-avatar.png" class="object-contain h-8 w-8 " alt="">
+          <img src="./images/image-avatar.png"  class="object-contain  h-8 w-8 " alt="">
 
         </div>
 
@@ -64,20 +63,28 @@
           </ul>
 
         </div>
-
-
         <!-- end of side nav -->
 
 
 
        <!-- cart basket -->
-        <div id="cartBasket" class=" shadow-lg  rounded-md  hidden  bg-white right-0 md:top-10">
+        <div id="cartBasket" class=" shadow-lg rounded-md  hidden  bg-white right-0 md:top-10">
           <div class="header pt-4 pb-4">
             <p class="text-xl text-base px-4">Cart</p>
           </div>
-          <hr class="py-7">
-          <div class="content">
-            <p class="p-3 text-center">No items in cart</p>
+          <hr class="py-4">
+          <div class="cartContent px-2">
+            <div class="flex flex-col cartItems hidden">
+              <div class="flex flex-row px-2 mb-3 space-x-2  relative ">
+                <img id="cartImage" src="./images/image-product-1.jpg" alt="image" class="w-[27%] h-[24%]">
+                <span class="text-sm break-all px-3 "> Fall Limited Edition Snea.. $125.00 x <span id="numberOfitems" ></span>  $<span id="costOfItems"></span> </span>
+                <img id="deleteCartItems" src="./images/icon-delete.svg"  alt="" class="w-[15px]  h-[16px] mt-2">
+              </div>
+              <button class="w-full bg-orange py-4 rounded-md text-white px-2">Checkout</button>
+            </div>
+            <div class="emptyCartText">
+              <p class="text-center font-bold text-darkGrayishBlue fallbackCartStatus">Your cart is empty.</p>
+            </div>
           </div>
         </div>
 
@@ -89,11 +96,86 @@
         <!-- main content -->
       <section>
         <div class="container mx-auto flex flex-col md:flex-row md:space-x-6 mt-20">
-          <!-- lightbox starts -->
-          <div class=" md:w-1/2">
-            <div class="imag w-80%">
-              <img src="./images/image-product-1.jpg" alt="">
+
+          <!-- carousel start for mobile views -->
+          <div id="controls-carousel" class="relative w-full block md:hidden" data-carousel="static">
+            <!-- Carousel wrapper -->
+            <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                <!-- Item 1 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="./image-product-1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+                <!-- Item 2 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                    <img src="./images/image-product-2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+                <!-- Item 3 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="./images/image-product-3.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+                <!-- Item 4 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="./images/image-product-4.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+                <!-- Item 5 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="/docs/images/carousel/carousel-5.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
             </div>
+            <!-- Slider controls -->
+            <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg aria-hidden="true" class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    <span class="sr-only">Previous</span>
+                </span>
+            </button>
+            <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg aria-hidden="true" class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    <span class="sr-only">Next</span>
+                </span>
+            </button>
+          </div>
+
+          <!-- carousel end -->
+
+
+
+
+
+          <!-- lightbox starts for desktop view -->
+          <div class=" md:w-1/2">
+                      <!-- Desktop Item Pictures -->
+                <div class="hidden sm:flex flex-col flex-1 items-center gap-8">
+                  <!-- Image -->
+                  <img src="./images/image-product-1.jpg" role="button"class="w-full max-w-md rounded-2xl cursor-pointer" id="desktop-image"  alt="Main image of the product"/>
+                  <!-- Thumbnails -->
+                  <form id="desktop-image-thumbnails" class="flex gap-8 max-w-md">
+                    <label for="desktop-thumbnail-1" class="desktop-thumbnail active">
+                      <input type="radio" name="desktop-thumbnail-select"  id="desktop-thumbnail-1" value="1"  class="hidden-radio" checked />
+                      <img   src="./images/image-product-1.jpg"  alt="Image 1 of product" class="cursor-pointer mix-blend-lighten brightness-110"/>
+                      <img   src="./images/image-product-1-thumbnail.jpg"  alt="Image 1 of product" class="cursor-pointer mix-blend-lighten brightness-110 hidden"/>
+
+                    </label>
+                    <label for="desktop-thumbnail-2" class="desktop-thumbnail">
+                      <input type="radio" name="desktop-thumbnail-select"id="desktop-thumbnail-2" value="2" class="hidden-radio"/>
+                      <img  src="./images/image-product-2.jpg"  alt="Image 2 of product" class="cursor-pointer mix-blend-lighten brightness-110"/>
+                      <img  src="./images/image-product-2-thumbnail.jpg"  alt="Image 2 of product" class="cursor-pointer mix-blend-lighten brightness-110 hidden"/>
+
+                    </label>
+                    <label for="desktop-thumbnail-3" class="desktop-thumbnail">
+                      <input type="radio" name="desktop-thumbnail-select" id="desktop-thumbnail-3" value="3" class="hidden-radio"  />
+                      <img src="./images/image-product-3.jpg" alt="Image 3 of product" class="cursor-pointer mix-blend-lighten brightness-110" />
+                      <img src="./images/image-product-3-thumbnail.jpg" alt="Image 3 of product" class="cursor-pointer mix-blend-lighten brightness-110 hidden" />
+
+                    </label>
+                    <label for="desktop-thumbnail-4" class="desktop-thumbnail">
+                      <input type="radio" name="desktop-thumbnail-select" id="desktop-thumbnail-4" value="4"   class="hidden-radio" />
+                      <img src="./images/image-product-4.jpg"  alt="Image 4 of product" class="cursor-pointer mix-blend-lighten brightness-110"/>
+                      <img src="./images/image-product-4-thumbnail.jpg"  alt="Image 4 of product" class="cursor-pointer mix-blend-lighten brightness-110 hidden"/>
+                    </label>
+                  </form>
+                </div>
           </div>
           <!-- lightbox ends -->
 
@@ -114,10 +196,9 @@
                 </div>               
                 <p class="text-darkGrayishBlue line-through ">$250.00</p>
               </div>
-              <div class="flex md:flex-row space-x-2">
-                <button  id="clickButton" value="0" class=" rounded-md relative shadow-2xl pt-2  space-x-4 pb-2 px-10 baseline text-veryDarkBlue bg-lightGrayishBlue" ><img src="./images/icon-minus.svg" id="minus" class="  absolute  left-2 top-4" alt=""><span id="innerNum">0</span><img src="./images/icon-plus.svg" id="addVal" class="absolute right-2 top-3 t" alt=""></button>
-                <button class="bg-orange  text-sm font-bold shadow-2xl relative rounded-md pt-2 pb-2   px-12 baseline text-lightGrayishBlue" id="addtoCart" type="submit"><img src="./images/icon-cart copy.svg"  class="w-3 h-3 text-white absolute left-6 top-4 " alt="">  Add to cart</button>
-                
+              <div class="flex sm:flex-row flex-col space-x-2 ">
+                <button  id="clickButton" value="0" class="rounded-md relative shadow-2xl   space-x-2  p-4 px-10  text-veryDarkBlue bg-lightGrayishBlue " ><img src="./images/icon-minus.svg" id="minus" class="  absolute  left-2 top-7" alt=""><span id="innerNum">0</span><img src="./images/icon-plus.svg" id="addVal" class="absolute right-2 top-6 " alt=""></button>
+                <button class="bg-orange  text-sm font-bold shadow-2xl relative rounded-md p-5  px-12  text-lightGrayishBlue" id="addtoCart" type="submit"><img src="./images/icon-cart copy.svg"  class="w-4 h-4  text-white absolute left-6 top-[4.5] " alt=""> <span class=""> Add to cart</span></button> 
               </div>
              
             </div>
