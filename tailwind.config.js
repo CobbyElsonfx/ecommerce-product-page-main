@@ -17,6 +17,7 @@ module.exports = {
 
     extend: {
       colors:{
+        red:"#dc2626",
         orange: "hsl(26, 100%, 55%)",
         paleOrange: "hsl(25, 100%, 94%)",
         veryDarkBlue: "hsl(220, 13%, 13%)",

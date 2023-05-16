@@ -46,3 +46,26 @@ body{
 #mySideNav {
   height: 100%;
 }
+
+
+/* lighbox desktop */
+input[type="radio"].hidden-radio {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+input[type="radio"].hidden-radio:checked + img {
+  border-color: #ff7e1b;
+}
+label img {
+  border-radius: 1rem;
+}
+
+form .active {
+  border: #ff7e1b solid ;
+  border-width: 2px;
+  border-radius: 1rem;
+  opacity:0.6;
+
+}
