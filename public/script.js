@@ -21,26 +21,44 @@ $(document).ready(()=> {
 
     //adding to cart functionality
     $("#addtoCart").click(()=>{
-      if(buttonValue > 0){
+      numberOfItems = numberOfItems + buttonValue
+      const costOfSneakers = numberOfItems * 125
+      if(numberOfItems > 0){
         $(".cartItems").removeClass("hidden")
-        numberOfItems = numberOfItems + buttonValue
-        const costOfSneakers = numberOfItems * 125
         $("#costOfItems").text(costOfSneakers)
         $("#numberOfitems").text(numberOfItems)
+        $("#cartValue").text(numberOfItems)
         console.log(numberOfItems, costOfSneakers)
-      }
-      if(buttonValue < 1){
-        $(".fallbackCartStatus").removeClass("hidden")
-      }
-     
+        //set the emptyCartText to hidden 
+        $(".emptyCartText").addClass("hidden")  
 
+      }
+      //render this if the value of cart is less than 1 which means it is empty
+      if(numberOfItems == 0){
+        // var $div = $("<div>")
+        // var $p = $("<p>",{
+        //   "class": "text-center font-bold text-darkGrayishBlue",
+        //   text :"Your cart is empty" 
+        // })
+        // $div.append($p)
+        // console.log("running")
+        // $(".cartContent").append($div)
+        $(".emptyCartText").addClass("hidden")  
+
+      }
+        //set the button to 0 when clicked
       buttonValue = 0
       $("#innerNum").text(buttonValue)
-      
-
     })
 
-
+    //delete cart items
+    $("#deleteCartItems").click(()=>{
+      console.log("clicked delte")
+      $(".cartItems").addClass("hidden")
+      $(".emptyCartText").removeClass("hidden")
+      numberOfItems = 0  
+      $("#cartValue").text(numberOfItems)
+    })
 
 
     // cartbasket toggle

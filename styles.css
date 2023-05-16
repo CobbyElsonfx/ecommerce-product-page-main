@@ -23,20 +23,20 @@ body{
 
 #cartBasket{
   position: absolute;
-  top: 7rem;
-  width:98%;
+  top: 4rem;
+  width:90vw;
   height: 15rem;
-  right: .2rem;
+  right: 1rem;
 }
 
 
 
 
-@media screen and (min-width:375px) {
+@media screen and (min-width:576px) {
   #cartBasket{
     position: absolute;
-    top: 3rem;
-    width: 17rem;
+    top: 4rem;
+    width: 19rem;
     height: 15rem;
   }
   
