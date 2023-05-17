@@ -7,9 +7,9 @@ module.exports = {
 
             ],
   theme: {
-    container: {
-      center: true,
-    },
+    // container: {
+    //   center: true,
+    // },
     screens: {
       sm:"480px",
       md:"768px",

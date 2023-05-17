@@ -518,14 +518,10 @@ video {
 
 .\!container {
   width: 100% !important;
-  margin-right: auto !important;
-  margin-left: auto !important;
 }
 
 .container {
   width: 100%;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 @media (min-width: 480px) {
@@ -3128,6 +3124,10 @@ video {
   padding: auto;
 }
 
+.p-3 {
+  padding: 0.75rem;
+}
+
 .\!py-0 {
   padding-top: 0px !important;
   padding-bottom: 0px !important;
@@ -4309,10 +4309,6 @@ body{
   font-weight: 16px;
 }
 
-main {
-  width: 90vw;
-}
-
 /* @media (min-width: 768px) {
     .fixed {
       transform: none !important;
@@ -4375,8 +4371,6 @@ form .active {
 @media (min-width: 480px) {
   .sm\:container {
     width: 100%;
-    margin-right: auto;
-    margin-left: auto;
   }
 
   @media (min-width: 480px) {
@@ -5773,6 +5767,11 @@ form .active {
 }
 
 @media (min-width: 480px) {
+  .sm\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .sm\:mt-\[4rem\] {
     margin-top: 4rem;
   }
