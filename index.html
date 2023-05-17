@@ -3,6 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
+  rel="stylesheet" />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />
+  <script src="https://cdn.tailwindcss.com/3.3.0"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        fontFamily: {
+          sans: ["Roboto", "sans-serif"],
+          body: ["Roboto", "sans-serif"],
+          mono: ["ui-monospace", "monospace"],
+        },
+      },
+      corePlugins: {
+        preflight: false,
+      },
+    };
+  </script>
 
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
@@ -13,7 +35,7 @@
 <body>
   
   <main class="">
-      <nav class=" container navbar relative mx-auto pl-2 pr-2  pt-2 flex  justify-between ">
+      <nav class="sm:container navbar relative mx-auto pl-4 pr-10  pt-2 flex  px- flex-row  justify-between ">
         <div class="flex   justify-between space-x-8">
             <img  src="./images/icon-menu.svg"   onclick="openNav()"  class="  md:invisible md:hidden  object-contain p-1 align-baseline" alt="">
             <img src="/images/logo.svg" class="object-contain pr-2" alt="">
@@ -68,7 +90,7 @@
 
 
        <!-- cart basket -->
-        <div id="cartBasket" class=" shadow-lg rounded-md  hidden  bg-white right-0 md:top-10">
+        <div id="cartBasket" class=" shadow-lg rounded-md  hidden z-10  bg-white right-0 md:top-10">
           <div class="header pt-4 pb-4">
             <p class="text-xl text-base px-4">Cart</p>
           </div>
@@ -92,50 +114,146 @@
       
       </nav>
       <!-- nav ends -->
-      <hr class="container mx-auto  border-t border-3 w-full md:block hidden border-gray-300  my-4 "/>
+      <hr class="container mx-auto  border-t border-3 w-full md:block hidden border-gray-300  mt-4 "/>
         <!-- main content -->
       <section>
-        <div class="container mx-auto flex flex-col md:flex-row md:space-x-6 mt-20">
+        <div class="sm:container mx-auto flex flex-col md:flex-row md:space-x-6 mt-20">
 
           <!-- carousel start for mobile views -->
-          <div id="controls-carousel" class="relative w-full block md:hidden" data-carousel="static">
-            <!-- Carousel wrapper -->
-            <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-                <!-- Item 1 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="./image-product-1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                </div>
-                <!-- Item 2 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                    <img src="./images/image-product-2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                </div>
-                <!-- Item 3 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="./images/image-product-3.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                </div>
-                <!-- Item 4 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="./images/image-product-4.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                </div>
-                <!-- Item 5 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="/docs/images/carousel/carousel-5.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                </div>
-            </div>
-            <!-- Slider controls -->
-            <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                    <svg aria-hidden="true" class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                    <span class="sr-only">Previous</span>
-                </span>
-            </button>
-            <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                    <svg aria-hidden="true" class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                    <span class="sr-only">Next</span>
-                </span>
-            </button>
+          <div
+          id="carouselExampleCrossfade"
+          class="relative block md:hidden"
+          data-te-carousel-init
+          data-te-carousel-slide>
+          <!--Carousel indicators-->
+          <div
+            class="absolute inset-x-0 bottom-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
+            data-te-carousel-indicators>
+            <button
+              type="button"
+              data-te-target="#carouselExampleCrossfade"
+              data-te-slide-to="0"
+              data-te-carousel-active
+              class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+              aria-current="true"
+              aria-label="Slide 1"></button>
+            <button
+              type="button"
+              data-te-target="#carouselExampleCrossfade"
+              data-te-slide-to="1"
+              class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+              aria-label="Slide 2"></button>
+            <button
+              type="button"
+              data-te-target="#carouselExampleCrossfade"
+              data-te-slide-to="2"
+              class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+              aria-label="Slide 3"></button>
+            <button
+              type="button"
+              data-te-target="#carouselExampleCrossfade"
+              data-te-slide-to="3"
+              class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+              aria-label="Slide 4"></button>
           </div>
+        
+          <!--Carousel items-->
+          <div
+            class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+            <!--First item-->
+            <div
+              class="relative float-left -mr-[100%] w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
+              data-te-carousel-fade
+              data-te-carousel-item
+              data-te-carousel-active>
+              <img
+                src="./images/image-product-1.jpg"
+                class="block w-full"
+                 />
+            </div>
+            <!--Second item-->
+            <div
+              class="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
+              data-te-carousel-fade
+              data-te-carousel-item>
+              <img
+                src="images/image-product-2.jpg"
+                class="block w-full"
+                />
+            </div>
+            <!--Third item-->
+            <div
+              class="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
+              data-te-carousel-fade
+              data-te-carousel-item>
+              <img
+                src="images/image-product-3.jpg"
+                class="block w-full"
+               />
+            </div>
+            <div
+              class="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
+              data-te-carousel-fade
+              data-te-carousel-item>
+              <img
+                src="images/image-product-4.jpg"
+                class="block w-full"
+                />
+            </div>
+          </div>
+        
+          <!--Carousel controls - prev item-->
+          <button
+            class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+            type="button"
+            data-te-target="#carouselExampleCrossfade"
+            data-te-slide="prev">
+            <span class="inline-block h-8 w-8">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="h-6 w-6">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 19.5L8.25 12l7.5-7.5" />
+              </svg>
+            </span>
+            <span
+              class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+              >Previous</span
+            >
+          </button>
+          <!--Carousel controls - next item-->
+          <button
+            class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+            type="button"
+            data-te-target="#carouselExampleCrossfade"
+            data-te-slide="next">
+            <span class="inline-block h-8 w-8">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="h-6 w-6">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
+            </span>
+            <span
+              class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+              >Next</span
+            >
+          </button>
+        </div>
+          
 
           <!-- carousel end -->
 
@@ -154,25 +272,21 @@
                     <label for="desktop-thumbnail-1" class="desktop-thumbnail active">
                       <input type="radio" name="desktop-thumbnail-select"  id="desktop-thumbnail-1" value="1"  class="hidden-radio" checked />
                       <img   src="./images/image-product-1.jpg"  alt="Image 1 of product" class="cursor-pointer mix-blend-lighten brightness-110"/>
-                      <img   src="./images/image-product-1-thumbnail.jpg"  alt="Image 1 of product" class="cursor-pointer mix-blend-lighten brightness-110 hidden"/>
-
                     </label>
+
                     <label for="desktop-thumbnail-2" class="desktop-thumbnail">
                       <input type="radio" name="desktop-thumbnail-select"id="desktop-thumbnail-2" value="2" class="hidden-radio"/>
                       <img  src="./images/image-product-2.jpg"  alt="Image 2 of product" class="cursor-pointer mix-blend-lighten brightness-110"/>
-                      <img  src="./images/image-product-2-thumbnail.jpg"  alt="Image 2 of product" class="cursor-pointer mix-blend-lighten brightness-110 hidden"/>
-
                     </label>
+
                     <label for="desktop-thumbnail-3" class="desktop-thumbnail">
                       <input type="radio" name="desktop-thumbnail-select" id="desktop-thumbnail-3" value="3" class="hidden-radio"  />
                       <img src="./images/image-product-3.jpg" alt="Image 3 of product" class="cursor-pointer mix-blend-lighten brightness-110" />
-                      <img src="./images/image-product-3-thumbnail.jpg" alt="Image 3 of product" class="cursor-pointer mix-blend-lighten brightness-110 hidden" />
-
                     </label>
+
                     <label for="desktop-thumbnail-4" class="desktop-thumbnail">
                       <input type="radio" name="desktop-thumbnail-select" id="desktop-thumbnail-4" value="4"   class="hidden-radio" />
                       <img src="./images/image-product-4.jpg"  alt="Image 4 of product" class="cursor-pointer mix-blend-lighten brightness-110"/>
-                      <img src="./images/image-product-4-thumbnail.jpg"  alt="Image 4 of product" class="cursor-pointer mix-blend-lighten brightness-110 hidden"/>
                     </label>
                   </form>
                 </div>
@@ -208,20 +322,13 @@
 
   </main>
  
-  
-
-
-  
-
-  
-
-  
-  
+   
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Andoh Francis (CobbyElsonfx)</a>.
   </div> -->
-  <script src="./public/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+    <script src="./public/script.js"></script>
 </body>
 </html>
 
