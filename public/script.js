@@ -106,30 +106,3 @@ thumbnails.forEach((thumbnail) => {
   });
 });
 
-
-
-// //cart update
-// const cartButton = document.getElementById("addtoCart")
-// const cartContent = document.getElementById("cartContent")
-// const cartImage = document.getElementById("cartImage")
-// const numberOfItems = document.getElementById("costOfItems")
-// let innerNum = document.getElementById("innerNum").textContent
-
-// console.log(numberOfItems.textContent, "here we og")
-
-// let temp = 0
-
-// cartButton.addEventListener("click", ()=>{
-//   //Get the value of the button element
-//   const temp = innerNum
-//   //multiply the innerNum by 125 when the button is clicked
-//   const cost = parseInt(temp) * 125
-
-//   console.log(cost)
-//   //select the current selected image 
-//   const selectedImage = document.querySelector('.desktop-thumbnail input[name="desktop-thumbnail-select"]:checked')
-//   if(selectedImage){
-//     cartImage.src = selectedImage.parentNode.querySelectorAll("img")[1].src
-//   }
-
-// })

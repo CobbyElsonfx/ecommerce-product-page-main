@@ -1,24 +1,26 @@
-# THIS PROJECT IS UNDER CONSTRUCTION
+# Frontend Mentor - E-commerce product page solution
 
-# Frontend Mentor - E-commerce product page
+This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-![Design preview for the E-commerce product page coding challenge](./design/desktop-preview.jpg)
+## Table of contents
 
-## Welcome! 👋
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#HTHML, #CSS  #JAVASCRIPT)
+  - [What I learned](#How to make an E-commerce lightbox with tailwindcss)
+  - [Useful resources](#ChatGPT for fixing bugs and issues)
+- [Author](#Andoh Francis)
+- [Acknowledgments](#Mr. Oliver Mensah)
 
-Thanks for checking out this front-end coding challenge.
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Overview
 
-**To do this challenge, you need a good understanding of HTML, CSS and JavaScript.**
+### The challenge
 
-## The challenge
-
-Your challenge is to build out this e-commerce product page and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to:
+Users should be able to:
 
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
@@ -27,136 +29,159 @@ Your users should be able to:
 - Add items to the cart
 - View the cart and remove items from it
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+### Screenshot
 
-## Where to find everything
+![](./screenshot.jpg)
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design.
+Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`.
+Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+### Links
 
-## Building your project
-
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
-
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
-
-## Deploying your project
-
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
-
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
-
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
-
-## Create a custom `README.md`
-
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
-
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
-
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
-
-## Submitting your solution
-
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
-
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
-
-### HOW TO 
-1. LIGHTBOX
-   {
-    To create an ecommerce lightbox using Tailwind CSS, you can follow these steps:
-
-    Create a modal component in your HTML markup using Tailwind CSS classes. Here's an example:
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 
-<div class="fixed z-10 inset-0 overflow-y-auto">
-  <div class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center">
-    <div class="fixed inset-0 transition-opacity" aria-hidden="true">
-      <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-    </div>
-    <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
-      <!-- Modal content here -->
-    </div>
-  </div>
-</div>
+### Built with
 
-    Add your ecommerce content inside the modal component. This could include product images, descriptions, prices, and a purchase button.
-
-    Use JavaScript to toggle the visibility of the modal component when a user clicks on a product or purchase button.
-
-Here's an example of how you might use JavaScript to toggle the visibility of the modal component:
+- Semantic HTML5 markup
+- CSS custom properties
+- Tailwindcss
+- Jquery
 
 
+### What I learned
 
-<script>
-  const openModalButtons = document.querySelectorAll('[data-modal-target]')
-  const closeModalButtons = document.querySelectorAll('[data-close-button]')
-  const overlay = document.getElementById('overlay')
+Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
-  openModalButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const modal = document.querySelector(button.dataset.modalTarget)
-      openModal(modal)
-    })
-  })
+To see how you can add code snippets, see below:
 
-  overlay.addEventListener('click', () => {
-    const modals = document.querySelectorAll('.modal.active')
-    modals.forEach(modal => {
-      closeModal(modal)
-    })
-  })
+```html
+<h1>Some HTML code I'm proud of</h1>
+<div class="hidden sm:flex flex-col flex-1 items-center gap-8">
+                  <!-- Image -->
+                  <img src="./images/image-product-1.jpg" role="button"class="w-full max-w-md rounded-2xl cursor-pointer" id="desktop-image"  alt="Main image of the product"/>
+                  <!-- Thumbnails -->
+                  <form id="desktop-image-thumbnails" class="flex gap-8 max-w-md">
+                    <label for="desktop-thumbnail-1" class="desktop-thumbnail active">
+                      <input type="radio" name="desktop-thumbnail-select"  id="desktop-thumbnail-1" value="1"  class="hidden-radio" checked />
+                      <img   src="./images/image-product-1.jpg"  alt="Image 1 of product" class="cursor-pointer mix-blend-lighten brightness-110"/>
+                    </label>
 
-  closeModalButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const modal = button.closest('.modal')
-      closeModal(modal)
-    })
-  })
+                    <label for="desktop-thumbnail-2" class="desktop-thumbnail">
+                      <input type="radio" name="desktop-thumbnail-select"id="desktop-thumbnail-2" value="2" class="hidden-radio"/>
+                      <img  src="./images/image-product-2.jpg"  alt="Image 2 of product" class="cursor-pointer mix-blend-lighten brightness-110"/>
+                    </label>
 
-  function openModal(modal) {
-    if (modal == null) return
-    modal.classList.add('active')
-    overlay.classList.add('active')
-  }
+                    <label for="desktop-thumbnail-3" class="desktop-thumbnail">
+                      <input type="radio" name="desktop-thumbnail-select" id="desktop-thumbnail-3" value="3" class="hidden-radio"  />
+                      <img src="./images/image-product-3.jpg" alt="Image 3 of product" class="cursor-pointer mix-blend-lighten brightness-110" />
+                    </label>
 
-  function closeModal(modal) {
-    if (modal == null) return
-    modal.classList.remove('active')
-    overlay.classList.remove('active')
-  }
-</script>
+                    <label for="desktop-thumbnail-4" class="desktop-thumbnail">
+                      <input type="radio" name="desktop-thumbnail-select" id="desktop-thumbnail-4" value="4"   class="hidden-radio" />
+                      <img src="./images/image-product-4.jpg"  alt="Image 4 of product" class="cursor-pointer mix-blend-lighten brightness-110"/>
+                    </label>
+                  </form>
+                </div>
+          </div>
+```
 
-In this example, we use the data-modal-target attribute to identify which modal to open when a user clicks a button. We also add an overlay element to dim the background when the modal is open.
-
-Note that this is just a basic example and you may need to customize the CSS and JavaScript to fit your specific needs.
-   }
+```
+```js
+$(document).ready(()=> {
+  let numberOfItems = 0
+  console.log(numberOfItems, "total")
+  let buttonValue = parseInt($("#clickButton").val())
   
+    $("#minus").click(()=>{
+        buttonValue --
+        if(buttonValue < 0){
+          buttonValue = 0
+        }
+        $("#clickButton").val(buttonValue)
+        $("#innerNum").text(buttonValue)
+
+    })
+
+    $("#addVal").click(()=>{
+        buttonValue ++
+        $("#clickButton").val(buttonValue)
+        $("#innerNum").text(buttonValue)
+    })
+
+    //adding to cart functionality
+    $("#addtoCart").click(()=>{
+      numberOfItems = numberOfItems + buttonValue
+      const costOfSneakers = numberOfItems * 125
+      if(numberOfItems > 0){
+        $(".cartItems").removeClass("hidden")
+        $("#costOfItems").text(costOfSneakers)
+        $("#numberOfitems").text(numberOfItems)
+        $("#cartValue").text(numberOfItems)
+        console.log(numberOfItems, costOfSneakers)
+        //set the emptyCartText to hidden 
+        $(".emptyCartText").addClass("hidden")  
+
+      }
+      //render this if the value of cart is less than 1 which means it is empty
+      if(numberOfItems == 0){
+        // var $div = $("<div>")
+        // var $p = $("<p>",{
+        //   "class": "text-center font-bold text-darkGrayishBlue",
+        //   text :"Your cart is empty" 
+        // })
+        // $div.append($p)
+        // console.log("running")
+        // $(".cartContent").append($div)
+        $(".emptyCartText").addClass("hidden")  
+
+      }
+        //set the button to 0 when clicked
+      buttonValue = 0
+      $("#innerNum").text(buttonValue)
+    })
+
+    //delete cart items
+    $("#deleteCartItems").click(()=>{
+      console.log("clicked delte")
+      $(".cartItems").addClass("hidden")
+      $(".emptyCartText").removeClass("hidden")
+      numberOfItems = 0  
+      $("#cartValue").text(numberOfItems)
+    })
 
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+    // cartbasket toggle
+    $("#cart").click(()=>{
+      $("#cartBasket").toggle()
+    })
+})
+```
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
 
-## Got feedback for us?
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+### Useful resources
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [Example resource 2](https://tailwind-elements.com/docs/standard/components/carousel/) - This website provides free tailwind templates such as carousel, forms, modals and many more
 
-**Have fun building!** 🚀
+
+
+## Author
+
+- Website - [Andoh Francis (website in progress)]
+- Frontend Mentor - [@CobbyElsonfx](https://www.frontendmentor.io/profile/CobbyElsonfx)
+- Twitter - [@CobbyElsonfx](https://www.twitter.com/CobbyElsonfx)
+
+
+## Acknowledgments
+
+Special thanks to Mr Oliver Mensah who has always been the strength and motivation behind every project I build
+
+

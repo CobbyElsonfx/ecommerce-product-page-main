@@ -23,7 +23,7 @@ body{
 
 #cartBasket{
   position: absolute;
-  top: 4rem;
+  top: 5rem;
   width:90vw;
   height: 15rem;
   right: 1rem;
@@ -36,7 +36,7 @@ body{
   #cartBasket{
     position: absolute;
     top: 4rem;
-    width: 19rem;
+    width: 20rem;
     height: 15rem;
   }
   
