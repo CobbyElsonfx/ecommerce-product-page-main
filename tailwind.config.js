@@ -7,12 +7,20 @@ module.exports = {
 
             ],
   theme: {
+    container: {
+      center: true,
+    },
     screens: {
       sm:"480px",
       md:"768px",
       lg:"976px",
       xl:"1440px"
 
+      },
+      fontFamily: {
+        sans: ["Roboto", "sans-serif"],
+        body: ["Roboto", "sans-serif"],
+        mono: ["ui-monospace", "monospace"],
       },
 
 
@@ -30,7 +38,5 @@ module.exports = {
       }
     },
   },
-  plugins: [
-        require('flowbite/plugin')
-    ],
+ 
 }
