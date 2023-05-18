@@ -16,13 +16,13 @@ body{
 #cartBasket{
   position: absolute;
   top: 5rem;
-  width:90vw;
+  width:85vw;
   height: 15rem;
   right: 1rem;
 }
 
 
-@media screen and (min-width:576px) {
+@media screen and (min-width:480px) {
   #cartBasket{
     position: absolute;
     top: 4rem;
