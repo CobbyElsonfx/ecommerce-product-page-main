@@ -25,7 +25,7 @@
 </head>
   <body>
     <main>
-        <nav class="sm:container sm:mx-auto navbar  relative pl-10 pr-10  pt-2 flex   flex-row  h-[4rem]  justify-between ">
+        <nav class="container  mx-auto navbar  relative   pt-2 flex   flex-row  h-[4rem]  justify-between px-0 sm:px-[4rem] bg-lightGrayishBlue">
           <div class="flex justify-between space-x-8">
               <img  src="./images/icon-menu.svg"   onclick="openNav()"  class="  md:invisible md:hidden  object-contain p-1 align-baseline" alt="">
               <img src="/images/logo.svg" class="object-contain pr-2" alt="">
@@ -50,7 +50,7 @@
           </div>
 
           
-          <div class="flex justify-between  space-x-6p pt-2 relative">
+          <div class="flex justify-between  space-x-6p pt-2 relative  ">
             <div class="absolute top-1 right-14 h-4 w-4 md:h-4 md:w-4 "  >
               <div class="bg-orange rounded-full w-5 h-3 relative left-2 top-2">
                 <span id="cartValue" class="    absolute text-white   left-1 top-0">0</span> 
@@ -117,7 +117,7 @@
                 <!--Carousel indicators-->
                 <div
                   class="absolute inset-x-0 bottom-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
-                  data-te-carousel-indicators>
+                  >
                   <button
                     type="button"
                     data-te-target="#carouselExampleCrossfade"
@@ -257,7 +257,7 @@
                 <p class="text-darkGrayishBlue">These low-profile sneakers are your perfect casual wear companion. Featuring a 
                   durable rubber outer sole, they’ll withstand everything the weather can offer.
                 </p>
-                <div>
+                <div  class="flex sm:flex-row justify-between md:justify-around md:flex-col">
                   <div class="flex md:flex-row space-x-2 relative">
                     <p class="font-bold text-2xl">
                       $125.00  
@@ -267,8 +267,13 @@
                   <p class="text-darkGrayishBlue line-through ">$250.00</p>
                 </div>
                 <div class="flex sm:flex-row flex-col space-x-2 ">
-                  <button  id="clickButton" value="0" class="rounded-md relative shadow-2xl   space-x-2  p-4 px-10  text-veryDarkBlue bg-lightGrayishBlue " ><img src="./images/icon-minus.svg" id="minus" class="  absolute  left-2 top-7" alt=""><span id="innerNum">0</span><img src="./images/icon-plus.svg" id="addVal" class="absolute right-2 top-6 " alt=""></button>
-                  <button class="bg-orange  text-sm font-bold shadow-2xl relative rounded-md p-5  px-12  text-lightGrayishBlue" id="addtoCart" type="submit"><img src="./images/icon-cart copy.svg"  class="w-4 h-4  text-white absolute left-6 top-[4.5] " alt=""> <span class=""> Add to cart</span></button> 
+                  
+                  <div class="py-2">
+                    <button  id="clickButton" value="0" class="bg-lightGrayishBlue w-full font-bold shadow-2xl relative  rounded-md  p-5   space-x-2   px-12  text-veryDarkBlue " ><img src="./images/icon-minus.svg" id="minus" class="  absolute  left-2 top-7" alt=""><span id="innerNum">0</span><img src="./images/icon-plus.svg" id="addVal" class="absolute right-2 top-7 " alt=""></button>
+                  </div>
+                  <div class=" py-2">
+                    <button  id="addtoCart"  class="bg-orange w-full  text-sm font-bold shadow-2xl relative rounded-md p-5  px-12  text-lightGrayishBlue" type="submit"><img src="./images/icon-cart copy.svg"  class="w-4 h-4  text-white absolute left-6 top-[4.5] " alt=""> <span class=""> Add to cart</span></button> 
+                  </div>
                 </div>
               
               </div>
