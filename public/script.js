@@ -1,3 +1,12 @@
+
+
+
+
+
+
+
+
+
 $(document).ready(()=> {
   let numberOfItems = 0
   console.log(numberOfItems, "total")
@@ -29,7 +38,6 @@ $(document).ready(()=> {
         $("#numberOfitems").text(numberOfItems)
         $("#cartValue").text(numberOfItems)
         console.log(numberOfItems, costOfSneakers)
-        //set the emptyCartText to hidden 
         $(".emptyCartText").addClass("hidden")  
 
       }
