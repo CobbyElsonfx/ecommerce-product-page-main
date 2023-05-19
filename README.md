@@ -4,16 +4,16 @@ This is a solution to the [E-commerce product page challenge on Frontend Mentor]
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
+- [Overview]
+  - [The challenge]
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
-  - [Built with](#HTHML, #CSS  #JAVASCRIPT)
+  - [Built with]
   - [What I learned](#How to make an E-commerce lightbox with tailwindcss)
-  - [Useful resources](#ChatGPT for fixing bugs and issues)
-- [Author](#Andoh Francis)
-- [Acknowledgments](#Mr. Oliver Mensah)
+  - [Useful resources]
+- [Author]
+- [Acknowledgments]
 
 
 ## Overview
@@ -168,8 +168,7 @@ $(document).ready(()=> {
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://tailwind-elements.com/docs/standard/components/carousel/) - This website provides free tailwind templates such as carousel, forms, modals and many more
+- [Tailwind Elements](https://tailwind-elements.com/docs/standard/components/carousel/) - This website provides free tailwind templates such as carousel, forms, modals and many more
 
 
 
