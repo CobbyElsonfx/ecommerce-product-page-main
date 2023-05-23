@@ -2,25 +2,14 @@
 
 This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Table of contents
 
-- [Overview]
-  - [The challenge]
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with]
-  - [What I learned](#How to make an E-commerce lightbox with tailwindcss)
-  - [Useful resources]
-- [Author]
-- [Acknowledgments]
 
 
 ## Overview
 
 ### The challenge
 
-Users should be able to:
+Users are able to:
 
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
@@ -30,20 +19,15 @@ Users should be able to:
 - View the cart and remove items from it
 
 ### Screenshot
+#### Desktop View
+Screenshot 2023-05-18 at 3.27.14 PM![image](https://github.com/CobbyElsonfx/ecommerce-product-page-main/assets/109095646/8310cf35-8e49-4209-98a6-f3457e018cbd)
+#### Mobile View
+Screenshot 2023-05-18 at 3.40.56 PM![image](https://github.com/CobbyElsonfx/ecommerce-product-page-main/assets/109095646/a0b5cb46-ee39-42f3-8a43-5fa485f9bc90)
 
-![]([./screenshot.jpg])
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 
@@ -57,12 +41,9 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<h1>Some HTML code I'm proud of this code which creates  an ecommerce lighbox where users click on a smaller thumbnail image and it desplays in a larger container above</h1>
 <div class="hidden sm:flex flex-col flex-1 items-center gap-8">
                   <!-- Image -->
                   <img src="./images/image-product-1.jpg" role="button"class="w-full max-w-md rounded-2xl cursor-pointer" id="desktop-image"  alt="Main image of the product"/>
@@ -93,6 +74,7 @@ To see how you can add code snippets, see below:
 ```
 
 ```
+* This Jquery code represents the logic behind the addition and removal of items  to the cart
 ```js
 $(document).ready(()=> {
   let numberOfItems = 0
